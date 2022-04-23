@@ -75,3 +75,18 @@ def check_details(account):
     """
     return Details.if_detail_exists(account)
 
+def generate_Password():
+
+    """
+    function to generate password
+    """
+    auto_password = Details.generatePassword()
+    return auto_password
+
+def copy_password(account):
+
+    """
+    function to copy password using pyperclip module framework
+    """
+    return Details.copy_password(account)
+
