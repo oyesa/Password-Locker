@@ -50,5 +50,22 @@ class Details():
             if(user.username == username and user.password == password):
                     a_user == user.username
         return a_user
+
+    def __init__(self,account,userId, password):
+
+        """
+        instantiate user details to be stored
+        """
+        self.account = account
+        self.userId = userId
+        self.password = password
+    
+    def save_details(self):
+
+        """
+        method to save new user details to details_list
+        """
+        Details.details_list.append(self)
+
        
 
