@@ -61,4 +61,17 @@ def delete_credential(details):
     """
     details.delete_details()
 
+def find_detail(account):
+
+    """
+    function to find user Details using account name 
+    """
+    return Details.find_detail(account)
+
+def check_details(account):
+
+    """
+    function to check using account name, whether user Details exists(returns a boolean)
+    """
+    return Details.if_detail_exists(account)
 
