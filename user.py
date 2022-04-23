@@ -67,5 +67,21 @@ class Details():
         """
         Details.details_list.append(self)
 
+    def delete_details(self):
+
+        """
+        delete_details method to delete an account from details_list
+        """
+        Details.details_list.remove(self)
+    
+    @classmethod
+    def find_credential(cls, account):
+
+        """
+        method to match account to  account_name
+        """
+        for detail in cls.details_list:
+            if detail.account == account:
+                return detail
        
 
