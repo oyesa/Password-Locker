@@ -75,7 +75,7 @@ class Details():
         Details.details_list.remove(self)
     
     @classmethod
-    def find_credential(cls, account):
+    def find_details(cls, account):
 
         """
         method to match account to  account_name
