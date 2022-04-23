@@ -68,6 +68,29 @@ class TestDetails(unittest.TestCase):
         """
         Details.details_list = []
 
+    def test_save_many_accounts(self):
+
+        """
+        test to check if we can save multiple detail objects to details list
+        """
+        self.new_detail.save_details()
+        test_detail = Details("Twitter", "OyesaOluchina", "Mal93isa") 
+        test_detail.save_details()
+        self.assertEqual(len(Details.details_list),2)
+
+    def test_delete_detail(self):
+
+        """
+        test method to test if we can remove an account's details saved in details_list
+        """
+        self.new_detail.save_details()
+        test_detail = Details("Twitter", "OyesaOluchina", "Mal93isa")
+        test_detail.save_details()
+
+        self.new_detail.delete_details()
+        self.assertEqual(len(Details.details_list),1)
+
+
 
     if __name__ == '__main__':
      unittest.main()
