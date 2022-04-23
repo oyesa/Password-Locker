@@ -122,3 +122,15 @@ def main():
         print(f"Hello {username} 🙂, Your account has been created succesfully! Your password is: {password}")
         print("*"*85)
 
+    elif short_code == "li":
+        print("*"*85)
+        print("Enter your username and Password to login:")
+        print('*' * 85)
+        username = input("Username: ")
+        password = input("Password: ")
+        login = login_user(username,password)
+        if login_user == login:
+            print(f"Hello {username} 🙂 Welcome Back!")  
+            print('\n')
+
+
