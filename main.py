@@ -31,3 +31,20 @@ def login_user(username,password):
     """
     check_user = Details.verify_user(username,password)
     return check_user
+
+def create_new_detail(account,userId,password):
+
+    """
+    function to create new details for a user account
+    """
+    new_detail = Details(account,userId,password)
+    return new_detail
+
+def save_credentials(credentials):
+
+    """
+    function to save Details to details list
+    """
+    details. save_details()
+
+    
