@@ -90,3 +90,35 @@ def copy_password(account):
     """
     return Details.copy_password(account)
 
+
+
+def main():
+    print("Hello Welcome to Password Locker 🙂...\n Please enter one of the shortcodes below to proceed.\n CNA ---  Create New Account  \n LI ---  Have An Existing Account  \n")
+
+    short_code=input("").lower().strip()
+    if short_code == "cna":
+        print("Sign Up")
+        print('*' * 85)
+
+        username = input("User_name: ")
+
+        while True:
+            print(" TP - To type your own pasword:\n GP - To generate Password")
+            password_Choice = input().lower().strip()
+
+            if password_Choice == 'tp':
+                password = input("Enter Password\n")
+                break
+
+            elif password_Choice == 'gp':
+                password = generate_Password()
+                break
+
+            else:
+                print("Invalid password! Try again")
+
+        save_user(create_new_user(username, password))
+        print("*"*85)
+        print(f"Hello {username} 🙂, Your account has been created succesfully! Your password is: {password}")
+        print("*"*85)
+
