@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.8
 
-from user import User, Details
+from user import User
+from user import Details
 
 def create_new_user(username,password):
 
@@ -54,7 +55,7 @@ def display_accounts_details():
     """
     return Details.display_details()
 
-def delete_credential(details):
+def delete_detail(details):
 
     """
     function to delete Details from details list
@@ -131,6 +132,35 @@ def main():
         login = login_user(username,password)
         if login_user == login:
             print(f"Hello {username} 🙂 Welcome Back!")  
+            print('\n')
+
+    while True:
+        print("Use these short codes to navigate Password Locker:\n CND - Create New Details \n DD - Display Details \n FD - Find a Detail \n GRP - Generate Random Password \n D - Delete Detail \n EX - Exit Application \n")
+        short_code = input().lower().strip()
+
+        if short_code == "cnd":
+            print("Create New Details")
+            print("."*20)
+            print("Account name ....")
+            account = input().lower()
+            print("Your Account username")
+            userName = input()
+            while True:
+                print(" IP - To input own pasword if you have an existing account:\n GRP - To generate random password")
+                password_Choice = input().lower().strip()
+                if password_Choice == 'ip':
+                    password = input("Enter Your Own Password\n")
+                    break
+
+                elif password_Choice == 'grp':
+                    password = generate_Password()
+                    break
+
+                else:
+                    print("Invalid password! Please try again")
+            save_details(create_new_detail(account,userId,password))
+            print('\n')
+            print(f"Account Detail for: {account} - UserId: {userId} - Password:{password} created succesfully")
             print('\n')
 
 
