@@ -83,5 +83,20 @@ class Details():
         for detail in cls.details_list:
             if detail.account == account:
                 return detail
-       
+
+    @classmethod
+    def copy_password(cls,account):
+        found_details = Details.find_detail(account)
+        pyperclip.copy(found_details.password)
+
+    @classmethod
+    def if_credential_exist(cls, account):
+
+        """
+        method that checks if a detail exists in detail (returns boolean)
+        """
+        for detail in cls.details_list:
+            if detail.account == account:
+                return True
+        return False  
 
