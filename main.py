@@ -40,11 +40,25 @@ def create_new_detail(account,userId,password):
     new_detail = Details(account,userId,password)
     return new_detail
 
-def save_credentials(credentials):
+def save_detials(details):
 
     """
     function to save Details to details list
     """
     details. save_details()
 
-    
+def display_accounts_details():
+
+    """
+    function to return all the saved details
+    """
+    return Details.display_details()
+
+def delete_credential(details):
+
+    """
+    function to delete Details from details list
+    """
+    details.delete_details()
+
+
