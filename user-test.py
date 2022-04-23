@@ -61,6 +61,13 @@ class TestDetails(unittest.TestCase):
         self.new_detail.save_details()
         self.assertEqual(len(Details.details_list),1)   
 
+    def tearDown(self):
+
+        """
+        method that does clean up after each test case has run.
+        """
+        Details.details_list = []
+
 
     if __name__ == '__main__':
      unittest.main()
