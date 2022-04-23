@@ -90,7 +90,7 @@ class TestDetails(unittest.TestCase):
         self.new_detail.delete_details()
         self.assertEqual(len(Details.details_list),1)
 
-    def test_find_credentialr(self):
+    def test_find_detail(self):
 
         """
         test to check whether detail entry can be found by account name 
@@ -103,7 +103,7 @@ class TestDetails(unittest.TestCase):
 
         self.assertEqual(the_detail.account,test_detail.account)
 
-    def test_credential_exist(self):
+    def test_detail_exist(self):
 
         """
         test to check whether we can or cant find the user detail (returns boolean) 
@@ -114,7 +114,13 @@ class TestDetails(unittest.TestCase):
         detail_is_found = Details.if_detail_exists("Twitter")
         self.assertTrue(detail_is_found)
 
+    def test_display_all_saved_credentials(self):
 
+        """
+        method to display all details saved by user
+        """
+
+        self.assertEqual(Details.display_details(),Details.details_list)
 
     if __name__ == '__main__':
      unittest.main()
