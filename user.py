@@ -100,3 +100,19 @@ class Details():
                 return True
         return False  
 
+    @classmethod
+    def display_details(cls):
+
+        """
+        method to return all items in details list
+        """
+        return cls.details_list
+
+    def generatePassword(stringLength=8):
+
+        """
+        generate a random password containing string letters and digits and special characters
+        """
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
+        return ''.join(random.choice(password) for i in range(stringLength))
+
