@@ -185,4 +185,21 @@ def main():
                 print(f"User Name: {search_detail.userId} Password :{search_detail.password}")
                 print('-' * 50)
 
+            else:
+                print("The details of the account you are searching for does not exist")
+                print('\n')
+        elif short_code == "d":
+            print("Enter the account name whose details you want to delete")
+            search_name = input().lower()
+            if find_detail(search_name):
+                search_detail = find_detail(search_name)
+                print("_"*50)
+                search_detail.delete_details()
+                print('\n')
+                print(f"Details for : {search_detail.account} successfully deleted")
+                print('\n')
+            else:
+                print("The account details you want to delete does not exist")
+
+
 
