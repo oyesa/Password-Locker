@@ -53,7 +53,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(self.new_detail.userId,'Oyesa_Oluchina')
         self.assertEqual(self.new_detail.password,'ru7Kit33')
 
-    def save_detail_test(self):
+    def save_details_test(self):
 
         """
         test case if detail object has been saved to details list.
@@ -74,7 +74,7 @@ class TestDetails(unittest.TestCase):
         test to check if we can save multiple detail objects to details list
         """
         self.new_detail.save_details()
-        test_detail = Details("Twitter", "OyesaOluchina", "Mal93isa") 
+        test_detail = Details("Instagram", "OyesaOluchina", "Mal93isa") 
         test_detail.save_details()
         self.assertEqual(len(Details.details_list),2)
 
@@ -84,7 +84,7 @@ class TestDetails(unittest.TestCase):
         test method to test if we can remove an account's details saved in details_list
         """
         self.new_detail.save_details()
-        test_detail = Details("Twitter", "OyesaOluchina", "Mal93isa")
+        test_detail = Details("Instagram", "OyesaOluchina", "Mal93isa")
         test_detail.save_details()
 
         self.new_detail.delete_details()
@@ -96,10 +96,10 @@ class TestDetails(unittest.TestCase):
         test to check whether detail entry can be found by account name 
         """
         self.new_detail.save_details()
-        test_detail = Details("Twitter", "OyesaOluchina", "Mal93isa") 
+        test_detail = Details("Instagram", "OyesaOluchina", "Mal93isa") 
         test_detail.save_details()
 
-        the_detail = Details.find_detail("Twitter")
+        the_detail = Details.find_detail("Instagram")
 
         self.assertEqual(the_detail.account,test_detail.account)
 
@@ -109,9 +109,9 @@ class TestDetails(unittest.TestCase):
         test to check whether we can or cant find the user detail (returns boolean) 
         """
         self.new_detail.save_details()
-        the_detail = Details("Twitter", "OyesaOluchina", "Mal93isa")  
+        the_detail = Details("Instagram", "OyesaOluchina", "Mal93isa")  
         the_detail.save_details()
-        detail_is_found = Details.if_detail_exists("Twitter")
+        detail_is_found = Details.if_detail_exists("Instagram")
         self.assertTrue(detail_is_found)
 
     def test_display_all_saved_details(self):

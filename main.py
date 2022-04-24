@@ -1,7 +1,6 @@
 #!/usr/bin/env python3.8
 
-from user import User
-from user import Details
+from user import User, Details
 
 def create_new_user(username,password):
 
@@ -135,7 +134,7 @@ def main():
             print('\n')
 
     while True:
-        print("Use these short codes to navigate Password Locker:\n CND - Create New Details \n DD - Display Details \n FD - Find a Detail \n GRP - Generate Random Password \n D - Delete Detail \n EX - Exit Application \n")
+        print("Use these short codes to navigate Password Locker:\n CND - Create New Details \n DD - Display Details \n FD - Find Detail \n GRP - Generate Random Password \n D - Delete Detail \n EX - Exit Application \n")
         short_code = input().lower().strip()
 
         if short_code == "cnd":
@@ -210,9 +209,7 @@ def main():
             break
 
         else:
-            print("Invalid shortcode. Shortcode should match the shprt-code menu provided")
-    else:
-        print("Please enter a valid input to continue")
+            print("Invalid shortcode. Shortcode should match the short-code menu provided")
 
 if __name__ == '__main__':
     main()

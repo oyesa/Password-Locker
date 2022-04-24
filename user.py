@@ -36,7 +36,7 @@ class User:
 
 
 class Details():
-    
+
     """
     create details class for user details
     """
