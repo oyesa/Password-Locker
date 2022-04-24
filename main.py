@@ -201,5 +201,19 @@ def main():
             else:
                 print("The account details you want to delete does not exist")
 
+        elif short_code == 'grp':
 
+            password = generate_Password()
+            print(f" {password} Has been generated succesfully. Proceed to your account")
+        elif short_code == 'ex':
+            print("Thanks for using passwords locker!🙂 Goodbye!")
+            break
+
+        else:
+            print("Invalid shortcode. Shortcode should match the shprt-code menu provided")
+    else:
+        print("Please enter a valid input to continue")
+
+if __name__ == '__main__':
+    main()
 
