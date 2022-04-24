@@ -34,9 +34,11 @@ class User:
         """
         User.user_list.remove(self)    
 
+
 class Details():
+    
     """
-    Create details class for user details
+    create details class for user details
     """
     details_list = []
     @classmethod
@@ -90,7 +92,7 @@ class Details():
         pyperclip.copy(found_details.password)
 
     @classmethod
-    def if_credential_exist(cls, account):
+    def if_detail_exist(cls, account):
 
         """
         method that checks if a detail exists in detail (returns boolean)

@@ -144,7 +144,7 @@ def main():
             print("Account name ....")
             account = input().lower()
             print("Your Account username")
-            userName = input()
+            userId = input()
             while True:
                 print(" IP - To input own pasword if you have an existing account:\n GRP - To generate random password")
                 password_Choice = input().lower().strip()
@@ -158,9 +158,31 @@ def main():
 
                 else:
                     print("Invalid password! Please try again")
+
             save_details(create_new_detail(account,userId,password))
             print('\n')
             print(f"Account Detail for: {account} - UserId: {userId} - Password:{password} created succesfully")
             print('\n')
+        elif short_code == "dd":
+            if display_accounts_details():
+                print("Here's your list of acoounts: ")
+                print('*' * 30)
+                print('_'* 30)
+
+                for account in display_accounts_details():
+                    print(f" Account:{account.account} \n User Name:{username}\n Password:{password}")
+                    print('_'* 30)
+                print('*' * 30)
+            else:
+                print("You don't have any saved details yet.")
+        elif short_code == "fd":
+            print("Enter the Account Name you want to search for.")
+            search_name = input().lower()
+            if find_detail(search_name):
+                search_detail = find_detail(search_name)
+                print(f"Account Name : {search_detail.account}")
+                print('-' * 50)
+                print(f"User Name: {search_detail.userId} Password :{search_detail.password}")
+                print('-' * 50)
 
 

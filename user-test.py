@@ -114,7 +114,7 @@ class TestDetails(unittest.TestCase):
         detail_is_found = Details.if_detail_exists("Twitter")
         self.assertTrue(detail_is_found)
 
-    def test_display_all_saved_credentials(self):
+    def test_display_all_saved_details(self):
 
         """
         method to display all details saved by user
