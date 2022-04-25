@@ -8,11 +8,16 @@ Password Locker is a python application that manages the user’s passwords as w
 ### Screenshot
 ### Behaviour Driven Development (BDD)
 
-| Behaviour                            |     Input                       |                                                                                          Output |
-| :---                                 |     :---:                       |                                                                                            ---: |
-|Open the application on the terminal  |       Run command $ ./main.py   |            Hello Welcome Password Locker.* CNA --- Create New Account * LI --- Have An Account  |
-|Select CNA                            |   input username and password   |          Hello username, Your account has been created succesfully! Your password is: password  |
-|Select LI                             |Enter your username and password |                                            Shortcode menu to help you navigate the application  |
+| Behaviour                            |     Input                       |                                                                                                       Output |
+| :---                                 |     :---:                       |                                                                                                         ---: |
+|Open the application on the terminal  |       Run command $ ./main.py   |                         Hello Welcome Password Locker.* CNA --- Create New Account * LI --- Have An Account  |
+|Select CNA                            |   input username and password   |                       Hello username, Your account has been created succesfully! Your password is: password  |
+|Select LI                             |Enter your username and password |                                                         Shortcode menu to help you navigate the application  |
+|Save details in the application       |   Enter                         |Enter account, username, password and choose IP to input password or GRP for the app to generate your password|
+|Display stored details                |   Enter DD                      |                                  Here's your list of saved accounts or You don't have any saved details yet  |
+|Find stored details using account name|   Enter FD                      |                                                              Enter the Account Name you want to search for   |
+|Delete existing account detail        |   Enter D                       |                                                     Enter the account name whose details you want to delete  |
+|Exit Application                      |   Enter EX                      |                                                              User exits application                          |
 
 
 ### Setup/Installation Requirements

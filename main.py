@@ -164,7 +164,7 @@ def main():
             print('\n')
         elif short_code == "dd":
             if display_accounts_details():
-                print("Here's your list of acoounts: ")
+                print("Here's your list of accounts: ")
                 print('*' * 30)
                 print('_'* 30)
 
