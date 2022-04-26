@@ -66,7 +66,7 @@ def find_detail(account):
     """
     function to find user Details using account name 
     """
-    return Details.find_detail(account)
+    return Details.find_details(account)
 
 def check_details(account):
 
