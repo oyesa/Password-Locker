@@ -158,7 +158,7 @@ def main():
                 else:
                     print("Invalid password! Please try again")
 
-            save_details(create_new_detail(account,userId,password))
+            Details.save_details(create_new_detail(account,userId,password))
             print('\n')
             print(f"Account Detail for: {account} - UserId: {userId} - Password:{password} created succesfully")
             print('\n')

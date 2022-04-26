@@ -5,7 +5,7 @@
 ### Description
 Password Locker is a python application that manages the user’s passwords as well as generate unique passwords for the user.  
 
-### Screenshot
+
 ### Behaviour Driven Development (BDD)
 
 | Behaviour                            |     Input                       |                                                                                                       Output |
